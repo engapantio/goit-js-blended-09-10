@@ -14,3 +14,17 @@
       <p>Текст</p>
   </li>
 */
+
+import refs from './js/refs';
+import functions from './js/tasks';
+
+const data = {};
+
+refs.headerForm.addEventListener('submit', e => {
+  e.preventDefault();
+  functions.createTask();
+  functions.renderTask();
+  refs.headerForm.reset();
+});
+
+console.log(functions);
